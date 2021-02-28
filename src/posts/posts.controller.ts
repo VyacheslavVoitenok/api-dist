@@ -28,7 +28,6 @@ export default class PostsController {
 
     createPost = (request: express.Request, response: express.Response) => {
         const post = request.body
-        console.log('post new', request.body)
         this.posts.push(post)
         response.status(200).send(post)
     }
